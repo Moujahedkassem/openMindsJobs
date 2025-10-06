@@ -1,0 +1,118 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "OpenMindsAI Logo":
+    - /url: /home
+    - img "OpenMindsAI Logo"
+  - navigation:
+    - link "Home":
+      - /url: /home
+    - link "Opportunities":
+      - /url: /opportunities
+    - link "Services":
+      - /url: /services
+    - link "Courses":
+      - /url: /courses
+  - link "Sign In":
+    - /url: /login
+    - button "Sign In"
+  - link "Get Started":
+    - /url: /register
+    - button "Get Started"
+- main:
+  - button "← Back to Login"
+  - img
+  - text: Choose Your Experience
+  - heading "How would you like to connect?" [level=1]
+  - paragraph: Select your role to access the right experience for your needs. We'll customize the platform just for you.
+  - img
+  - heading "✅ I'm a Freelancer" [level=2]
+  - paragraph: I want to find exciting AI opportunities and projects from top companies.
+  - img
+  - text: Browse opportunities
+  - img
+  - text: Apply to projects
+  - img
+  - text: Connect with companies Get Started
+  - img
+  - img
+  - heading "🏢 I'm a Company" [level=2]
+  - paragraph: I want to post opportunities and find talented AI professionals.
+  - img
+  - text: Post opportunities
+  - img
+  - text: Find AI talent
+  - img
+  - text: Manage applications Get Started
+  - img
+  - img
+  - heading "Why Choose Your Role?" [level=3]
+  - paragraph: Your role selection helps us provide you with the most relevant experience. You can always switch roles later from any page.
+  - heading "For Freelancers" [level=4]
+  - list:
+    - listitem: • Browse and filter opportunities
+    - listitem: • Apply to projects directly
+    - listitem: • Get matched with companies
+  - heading "For Companies" [level=4]
+  - list:
+    - listitem: • Post detailed opportunities
+    - listitem: • Reach qualified AI talent
+    - listitem: • Manage applications easily
+- contentinfo:
+  - img "OpenMindsAI Logo"
+  - text: OpenMindsAI
+  - paragraph: We help businesses leverage artificial intelligence to drive innovation, increase efficiency, and achieve sustainable growth in the digital age.
+  - link "LinkedIn":
+    - /url: "#"
+    - img
+  - link "Twitter":
+    - /url: "#"
+    - img
+  - link "GitHub":
+    - /url: "#"
+    - img
+  - heading "Services" [level=3]
+  - list:
+    - listitem:
+      - link "AI Strategy & Consulting":
+        - /url: "#services"
+    - listitem:
+      - link "Workflow Automation":
+        - /url: "#services"
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: "#services"
+    - listitem:
+      - link "NLP & Communication":
+        - /url: "#services"
+    - listitem:
+      - link "Business Intelligence":
+        - /url: "#services"
+    - listitem:
+      - link "Training & Upskilling":
+        - /url: "#services"
+  - heading "Contact" [level=3]
+  - list:
+    - listitem:
+      - img
+      - link "hello@openmindsai.com":
+        - /url: mailto:hello@openmindsai.com
+    - listitem:
+      - img
+      - link "+49 123 456 789":
+        - /url: tel:+49123456789
+    - listitem:
+      - img
+      - text: Hamburg, Germany
+  - heading "Stay Updated" [level=3]
+  - paragraph: Get the latest insights on AI trends and business transformation delivered to your inbox.
+  - textbox "Enter your email"
+  - button "Subscribe"
+  - paragraph:
+    - text: © 2025 OpenMindsAI. Made with
+    - img
+    - text: in Hamburg
+  - button "Scroll to top":
+    - img
+```

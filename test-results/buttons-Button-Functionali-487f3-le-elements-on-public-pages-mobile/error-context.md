@@ -1,0 +1,86 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "OpenMindsAI Logo":
+    - /url: /home
+    - img "OpenMindsAI Logo"
+  - link "Sign In":
+    - /url: /login
+    - button "Sign In"
+  - link "Get Started":
+    - /url: /register
+    - button "Get Started"
+- main:
+  - link "Back to Login":
+    - /url: /login
+    - button "Back to Login":
+      - img
+      - text: Back to Login
+  - heading "Terms of Service" [level=1]
+  - paragraph: This page is coming soon. We're working on our terms of service to ensure a clear and fair experience for all users.
+  - heading "What to Expect" [level=2]
+  - list:
+    - listitem: • Clear user rights and responsibilities
+    - listitem: • Service usage guidelines
+    - listitem: • Privacy and data protection
+    - listitem: • Dispute resolution processes
+    - listitem: • Contact information for legal matters
+  - paragraph: For immediate questions about our services, please contact our support team.
+- contentinfo:
+  - img "OpenMindsAI Logo"
+  - text: OpenMindsAI
+  - paragraph: We help businesses leverage artificial intelligence to drive innovation, increase efficiency, and achieve sustainable growth in the digital age.
+  - link "LinkedIn":
+    - /url: "#"
+    - img
+  - link "Twitter":
+    - /url: "#"
+    - img
+  - link "GitHub":
+    - /url: "#"
+    - img
+  - heading "Services" [level=3]
+  - list:
+    - listitem:
+      - link "AI Strategy & Consulting":
+        - /url: "#services"
+    - listitem:
+      - link "Workflow Automation":
+        - /url: "#services"
+    - listitem:
+      - link "Predictive Analytics":
+        - /url: "#services"
+    - listitem:
+      - link "NLP & Communication":
+        - /url: "#services"
+    - listitem:
+      - link "Business Intelligence":
+        - /url: "#services"
+    - listitem:
+      - link "Training & Upskilling":
+        - /url: "#services"
+  - heading "Contact" [level=3]
+  - list:
+    - listitem:
+      - img
+      - link "hello@openmindsai.com":
+        - /url: mailto:hello@openmindsai.com
+    - listitem:
+      - img
+      - link "+49 123 456 789":
+        - /url: tel:+49123456789
+    - listitem:
+      - img
+      - text: Hamburg, Germany
+  - heading "Stay Updated" [level=3]
+  - paragraph: Get the latest insights on AI trends and business transformation delivered to your inbox.
+  - textbox "Enter your email"
+  - button "Subscribe"
+  - paragraph:
+    - text: © 2025 OpenMindsAI. Made with
+    - img
+    - text: in Hamburg
+  - button "Scroll to top":
+    - img
+```

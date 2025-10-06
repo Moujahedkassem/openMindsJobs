@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #f5f5f5;
+  --foreground: #0f022e;
+  --card: #ffffff;
+  --card-foreground: #0f022e;
+  --popover: #ffffff;
+  --popover-foreground: #0f022e;
+  --primary: #0f022d;
+  --primary-foreground: #ffffff;
+  --secondary: #120433;
+  --secondary-foreground: #ffffff;
+  --muted: #f0f0f5;
+  --muted-foreground: #737373;
+  --accent: #100330;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #0f022d;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #100330;
+  --chart-1: #0f022d;
+  --chart-2: #100330;
+  --chart-3: #120433;
+  --chart-4: #f0f0f5;
+  --chart-5: rgba(15, 2, 45, 0.6);
+  --radius: 1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f022e;
+  --sidebar-primary: #0f022d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0f0f5;
+  --sidebar-accent-foreground: #0f022e;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #100330;
+}
+
+.dark {
+  --background: #0f022d;
+  --foreground: #f5f5f5;
+  --card: #120433;
+  --card-foreground: #f5f5f5;
+  --popover: #120433;
+  --popover-foreground: #f5f5f5;
+  --primary: #100330;
+  --primary-foreground: #0f022d;
+  --secondary: #120433;
+  --secondary-foreground: #f5f5f5;
+  --muted: #120433;
+  --muted-foreground: rgba(245, 245, 245, 0.7);
+  --accent: #100330;
+  --accent-foreground: #0f022d;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(16, 3, 48, 0.2);
+  --input: #120433;
+  --input-background: #120433;
+  --switch-background: rgba(16, 3, 48, 0.3);
+  --ring: #100330;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #100330;
+  --chart-2: #f5f5f5;
+  --chart-3: #120433;
+  --chart-4: rgba(16, 3, 48, 0.6);
+  --chart-5: rgba(245, 245, 245, 0.6);
+  --sidebar: #120433;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #100330;
+  --sidebar-primary-foreground: #0f022d;
+  --sidebar-accent: #0f022d;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(16, 3, 48, 0.2);
+  --sidebar-ring: #100330;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+/* Custom Wave Animations */
+@keyframes wave-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes wave-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-25px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(-10px);
+  }
+}
+
+.wave-animation {
+  animation: wave-float 8s ease-in-out infinite;
+}
+
+.wave-pulse {
+  animation: wave-pulse 6s ease-in-out infinite;
+}
+
+.particle-float {
+  animation: particle-float 10s ease-in-out infinite;
+}
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
+/**
+ * Base typography with modern scale
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight tracking-tight;
+    }
+
+    h2 {
+      @apply text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-tight tracking-tight;
+    }
+
+    h3 {
+      @apply text-2xl md:text-3xl font-display font-semibold leading-tight;
+    }
+
+    h4 {
+      @apply text-xl md:text-2xl font-display font-medium leading-tight;
+    }
+
+    h5 {
+      @apply text-lg md:text-xl font-display font-medium leading-tight;
+    }
+
+    h6 {
+      @apply text-base md:text-lg font-display font-medium leading-tight;
+    }
+
+    p {
+      @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+    }
+
+    label {
+      @apply text-sm font-medium leading-tight;
+    }
+
+    button {
+      @apply text-base font-medium leading-tight;
+    }
+
+    input {
+      @apply text-base leading-tight;
+    }
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .text-gradient-reverse {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(15, 2, 45, 0.3);
+  }
+
+  .shadow-glow-lg {
+    box-shadow: 0 0 40px rgba(15, 2, 45, 0.4);
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* HubSpot Form Custom Styling */
+.custom-hubspot-form {
+  /* Override HubSpot's default styling */
+}
+
+/* Remove HubSpot branding/footer under forms */
+.custom-hubspot-form .hs-branding,
+.custom-hubspot-form .hubspot-link__container,
+.custom-hubspot-form .hs-form-privacy-policy,
+.custom-hubspot-form .hs-form__branding,
+.custom-hubspot-form .hs_legal_links,
+.custom-hubspot-form .legal-consent-container,
+.custom-hubspot-form [class*="hubspot-link"],
+.custom-hubspot-form a[href*="hubspot"],
+.custom-hubspot-form a[href*="hs-sites"] {
+  display: none !important;
+}
+
+.custom-hubspot-form .hs-form {
+  font-family: inherit !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field {
+  margin-bottom: 1.5rem !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field label {
+  display: block !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: var(--foreground) !important;
+  margin-bottom: 0.5rem !important;
+  font-family: inherit !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field .hs-input {
+  width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 0.75rem !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(8px) !important;
+  color: var(--foreground) !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field .hs-input:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px rgba(15, 2, 45, 0.1) !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field .hs-input::placeholder {
+  color: var(--muted-foreground) !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field textarea.hs-input {
+  resize: none !important;
+  min-height: 120px !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-field select.hs-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 0.5rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.5em 1.5em !important;
+  padding-right: 2.5rem !important;
+}
+
+.custom-hubspot-form .hs-form .hs-submit {
+  margin-top: 1rem !important;
+}
+
+.custom-hubspot-form .hs-form .hs-submit .hs-button {
+  width: 100% !important;
+  padding: 0.75rem 1.5rem !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  background-image: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%) !important;
+  box-shadow: 0 10px 25px -10px rgba(16, 3, 48, 0.5) !important;
+}
+
+.custom-hubspot-form .hs-form .hs-submit .hs-button:hover {
+  filter: brightness(1.05) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 20px 35px -15px rgba(16, 3, 48, 0.55) !important;
+}
+
+.custom-hubspot-form .hs-form .hs-submit .hs-button:active {
+  transform: translateY(0) !important;
+}
+
+.custom-hubspot-form .hs-form .hs-error-msgs {
+  margin-top: 0.5rem !important;
+}
+
+.custom-hubspot-form .hs-form .hs-error-msgs .hs-error-msg {
+  color: var(--destructive) !important;
+  font-size: 0.875rem !important;
+  font-family: inherit !important;
+}
+
+.custom-hubspot-form .hs-form .hs-form-required {
+  color: var(--destructive) !important;
+}
+
+/* Success message styling */
+.custom-hubspot-form .submitted-message {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  border-radius: 0.75rem !important;
+  padding: 1rem !important;
+  color: rgb(34, 197, 94) !important;
+  font-family: inherit !important;
+  text-align: center !important;
+}
+
+/* Loading state */
+.custom-hubspot-form .hs-form .hs-submit .hs-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Services page HubSpot form styling (dark background) */
+.services-hubspot-form .hs-form .hs-form-field .hs-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.services-hubspot-form .hs-form .hs-form-field .hs-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.services-hubspot-form .hs-form .hs-form-field .hs-input:focus {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.services-hubspot-form .hs-form .hs-form-field label {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.services-hubspot-form .hs-form .hs-submit .hs-button {
+  background: white !important;
+  color: var(--primary) !important;
+}
+
+.services-hubspot-form .hs-form .hs-submit .hs-button:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.services-hubspot-form .hs-form .hs-error-msgs .hs-error-msg {
+  color: #fca5a5 !important;
+}
+
+.services-hubspot-form .hs-form .hs-form-required {
+  color: #fca5a5 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-hubspot-form .hs-form .hs-form-field .hs-input {
+    padding: 0.625rem 0.875rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .custom-hubspot-form .hs-form .hs-submit .hs-button {
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.875rem !important;
+  }
+}
